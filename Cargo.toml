@@ -2,10 +2,12 @@
 name = "clinews"
 version = "0.1.0"
 edition = "2021"
+description = "A simple cli news reader app"
+license = "MIT"
+authors = ["xiangxu"]
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
 newsapi = {path = "./newsapi"}
-dotenv = "0.15.0"
 termimad="0.17.1"

@@ -1,13 +1,16 @@
-use colour::{dark_blue, yellow};
+mod theme;
 use dotenv::dotenv;
 use std::error::Error;
 
 use newsapi::{get_articles, Articles};
 
 fn render_articles(articles: &Articles) {
+    let theme = theme::default();
+    theme.print_text("# Top Headlines\n\n");
     for a in &articles.articles {
-        dark_blue!("> {}\n", a.title);
-        yellow!("> {}\n", a.url);
+        theme.print_text(&format!("`{}`", a.title));
+        theme.print_text(&format!("> *{}*", a.url));
+        theme.print_text("---")
     }
 }
 fn main() -> Result<(), Box<dyn Error>> {

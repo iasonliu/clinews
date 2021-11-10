@@ -6,6 +6,6 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
-colour = "0.6.0"
 newsapi = {path = "./newsapi"}
 dotenv = "0.15.0"
+termimad="0.17.1"
